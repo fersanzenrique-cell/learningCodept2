@@ -12,14 +12,17 @@
             "id": "77a70c269281af1c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Procesos y Servicios/Programación multiproceso/BCP.md",
-                "mode": "source",
-                "source": false
+                "file": "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
+                "viewState": {
+                  "x": -180,
+                  "y": -220,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "BCP"
+              "icon": "lucide-layout-dashboard",
+              "title": "Estados de un proceso"
             }
           }
         ]
@@ -179,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Procesos y Servicios/Programación multiproceso/BCP.md",
+                "file": "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -210,9 +213,10 @@
   },
   "active": "77a70c269281af1c",
   "lastOpenFiles": [
+    "Procesos y Servicios/Programación multiproceso/BCP.md",
+    "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
     "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
     "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
-    "Procesos y Servicios/Programación multiproceso/BCP.md",
     "Sin título.md",
     "Programas,.md",
     "().md",

@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"d3fa94828356acb2","type":"text","text":"### Estados de un [[Programas, ejecutables, procesos y servicios#^6e2b06|proceso]]","x":-350,"y":-520,"width":280,"height":80},
+		{"id":"9ad583ed5d1ff221","type":"text","text":"<center> <h1>Bloqueado\n</center>\n","x":-460,"y":-160,"width":200,"height":100},
+		{"id":"ef6102d60c09c679","type":"text","text":"<center> <h1>Ejecución</center>\n","x":-280,"y":-380,"width":180,"height":100},
+		{"id":"645f27bcbe34cf19","type":"text","text":"<center> <h1>Listo\n</center>\n","x":-100,"y":-160,"width":180,"height":100}
+	],
+	"edges":[
+		{"id":"ded03b7b9bca6fcd","fromNode":"645f27bcbe34cf19","fromSide":"top","toNode":"ef6102d60c09c679","toSide":"right","label":"Despachar"},
+		{"id":"9f681817064c4595","fromNode":"ef6102d60c09c679","fromSide":"right","toNode":"645f27bcbe34cf19","toSide":"left","label":"Fin de tiempo"},
+		{"id":"d262c946eed583cd","fromNode":"ef6102d60c09c679","fromSide":"left","toNode":"9ad583ed5d1ff221","toSide":"top","label":"Bloqueo"},
+		{"id":"4c5936a04497b1a1","fromNode":"9ad583ed5d1ff221","fromSide":"bottom","toNode":"645f27bcbe34cf19","toSide":"bottom","label":"Evento"}
+	]
+}
