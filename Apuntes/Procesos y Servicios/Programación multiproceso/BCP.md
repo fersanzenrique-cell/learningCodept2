@@ -1,4 +1,4 @@
-- El **Bloque de Control de Proceso** es una estructura de datos controlada por el sistema operativo para controlar que [[Programas, ejecutables, procesos y servicios#^6e2b06|procesos]] salen de la CPU o vuelven a entrar en ella.
+- El **Bloque de Control de Proceso** es una estructura de datos controlada por el OS para controlar que [[Programas, ejecutables, procesos y servicios#^6e2b06|procesos]] salen de la CPU o vuelven a entrar en ella.
 -  Esta compuesta por:
 	- Identificador del proceso (único para cada proceso), PID.
 	- PPID.
