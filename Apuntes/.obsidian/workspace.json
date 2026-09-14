@@ -6,6 +6,7 @@
       {
         "id": "874e7ac57d63c64a",
         "type": "tabs",
+        "dimension": 56.66243654822335,
         "children": [
           {
             "id": "77a70c269281af1c",
@@ -26,6 +27,7 @@
       {
         "id": "c66087ee61d712a9",
         "type": "tabs",
+        "dimension": 43.33756345177665,
         "children": [
           {
             "id": "b05e5f17da434469",
@@ -149,7 +151,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -185,23 +187,14 @@
               "icon": "lucide-list",
               "title": "Esquema"
             }
-          },
-          {
-            "id": "4db8869ef30ecdeb",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,9 +210,9 @@
   },
   "active": "77a70c269281af1c",
   "lastOpenFiles": [
+    "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
     "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
     "Procesos y Servicios/Programación multiproceso/BCP.md",
-    "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
     "Sin título.md",
     "Programas,.md",
     "().md",
