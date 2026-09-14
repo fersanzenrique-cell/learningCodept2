@@ -12,17 +12,14 @@
             "id": "77a70c269281af1c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
-                "viewState": {
-                  "x": -180,
-                  "y": -220,
-                  "zoom": 0
-                }
+                "file": "Procesos y Servicios/Programación multiproceso/Algoritmos de planificación.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Estados de un proceso"
+              "icon": "lucide-file",
+              "title": "Algoritmos de planificación"
             }
           }
         ]
@@ -182,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
+                "file": "Procesos y Servicios/Programación multiproceso/Medidas de planificación.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -211,12 +208,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "77a70c269281af1c",
+  "active": "b05e5f17da434469",
   "lastOpenFiles": [
+    "Procesos y Servicios/Programación multiproceso/Algoritmos de planificación.md",
     "Procesos y Servicios/Programación multiproceso/BCP.md",
+    "Procesos y Servicios/Programación multiproceso/Tipos de planificación de procesos.md",
+    "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
+    "Procesos y Servicios/Programación multiproceso/Medidas de planificación.md",
+    "Procesos y Servicios/Programación multiproceso/Niveles de planificación de procesos.md",
     "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
     "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
-    "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
     "Sin título.md",
     "Programas,.md",
     "().md",
