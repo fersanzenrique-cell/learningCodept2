@@ -1,0 +1,7 @@
+- Un [[Programas, ejecutables, procesos y servicios#^6e2b06|proceso]] se compone de:
+	- Código ejecutable
+	- Datos
+	- Pila del programa
+	- Contador de programa (puntero de instrucciones)
+	- Puntero de pila y otros registros
+	- Información necesaria para ejecutar el programa

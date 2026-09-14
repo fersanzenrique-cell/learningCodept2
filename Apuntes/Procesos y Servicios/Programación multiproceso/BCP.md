@@ -1,0 +1,7 @@
+- El **Bloque de Control de Proceso** es una estructura de datos controlada por el sistema operativo para controlar que procesos salen de la CPU o vuelven a entrar en ella.
+-  Esta compuesta por:
+	- Identificador del proceso (único para cada proceso)
+	- Estado del proceso
+	- Contador de programa
+	- Registros de la CPU
+	- 
