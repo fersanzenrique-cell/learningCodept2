@@ -4,9 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "874e7ac57d63c64a",
+        "id": "e5783ac8dcf92098",
         "type": "tabs",
-        "dimension": 56.66243654822335,
         "children": [
           {
             "id": "77a70c269281af1c",
@@ -25,12 +24,11 @@
         ]
       },
       {
-        "id": "c66087ee61d712a9",
+        "id": "1b1fe72871e9f505",
         "type": "tabs",
-        "dimension": 43.33756345177665,
         "children": [
           {
-            "id": "b05e5f17da434469",
+            "id": "d3dd271c78d1adc7",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -179,13 +177,22 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Procesos y Servicios/Programación multiproceso/Medidas de planificación.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Esquema"
+            }
+          },
+          {
+            "id": "248f7268de30ff12",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -208,16 +215,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "77a70c269281af1c",
+  "active": "d3dd271c78d1adc7",
   "lastOpenFiles": [
-    "Procesos y Servicios/Programación multiproceso/BCP.md",
-    "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
+    "Procesos y Servicios/Programación multiproceso/Algoritmos de planificación.md",
     "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
     "Procesos y Servicios/Programación multiproceso/Medidas de planificación.md",
-    "Procesos y Servicios/Programación multiproceso/Niveles de planificación de procesos.md",
-    "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
+    "Sin título.base",
+    "2026-09-14.md",
+    "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
     "Procesos y Servicios/Programación multiproceso/Tipos de planificación de procesos.md",
-    "Procesos y Servicios/Programación multiproceso/Algoritmos de planificación.md",
+    "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
+    "Procesos y Servicios/Programación multiproceso/BCP.md",
+    "Procesos y Servicios/Programación multiproceso/Niveles de planificación de procesos.md",
     "Sin título.md",
     "Programas,.md",
     "().md",
