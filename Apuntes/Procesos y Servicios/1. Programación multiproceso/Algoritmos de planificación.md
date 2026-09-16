@@ -1,4 +1,4 @@
-[[Programas, ejecutables, procesos y servicios]]
+[[Programas, ejecutables, procesos y servicios|]]
 
 - **FCFS (First Come, First Served)**: El primero en llegar es el primero en entrar a la CPU. [[Tipos de planificación de procesos#^4aa489|No apropiativo.]]
 	- + Fácil de implementar.
@@ -8,6 +8,7 @@
 	- + Minimiza el tiempo de espera medio.
 	- - Riesgo de inanición de los procesos largos.
 	- - En la práctica se basa en estimaciones de la duración de los procesos.
+	- Son ideales para *batches*.
 	
 - **Por prioridad**: Entra el de mayor prioridad. [[Tipos de planificación de procesos#^f0235a|Apropiativo]] o no apropiativo.
 	- - Los procesos con prioridad más baja tienen riesgo de inanición. Solución: envejecimiento (aumentar prioridad con el tiempo).

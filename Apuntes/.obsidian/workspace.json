@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Procesos y Servicios/Programación multiproceso/Algoritmos de planificación.md",
+                "file": "Acceso a datos/1. Introducción/Programas y datos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmos de planificación"
+              "title": "Programas y datos"
             }
           }
         ]
@@ -215,24 +215,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d3dd271c78d1adc7",
+  "active": "681a06889733d200",
   "lastOpenFiles": [
-    "Procesos y Servicios/Programación multiproceso/Algoritmos de planificación.md",
-    "Procesos y Servicios/Programación multiproceso/Estados de un proceso.canvas",
-    "Procesos y Servicios/Programación multiproceso/Medidas de planificación.md",
+    "Acceso a datos/0. Conceptos de la POO",
+    "Procesos y Servicios/1. Programación multiproceso/BCP.md",
+    "Procesos y Servicios/1. Programación multiproceso/Componentes de un proceso.md",
+    "Procesos y Servicios/1. Programación multiproceso/Algoritmos de planificación.md",
+    "Procesos y Servicios/1. Programación multiproceso/Tipos de planificación de procesos.md",
+    "Procesos y Servicios/1. Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
+    "Procesos y Servicios/1. Programación multiproceso/Estados de un proceso.canvas",
+    "Acceso a datos/1. Introducción/Programas y datos.md",
+    "Procesos y Servicios/Programación multiproceso/Sin nombre",
+    "Acceso a datos/1. Introducción",
+    "Acceso a datos/Sin título.md",
+    "Acceso a datos",
+    "Procesos y Servicios/1. Programación multiproceso/Niveles de planificación de procesos.md",
+    "Procesos y Servicios/1. Programación multiproceso/Medidas de planificación.md",
+    "Tags",
+    "Sources",
     "Sin título.base",
     "2026-09-14.md",
-    "Procesos y Servicios/Programación multiproceso/Componentes de un proceso.md",
-    "Procesos y Servicios/Programación multiproceso/Tipos de planificación de procesos.md",
-    "Procesos y Servicios/Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
-    "Procesos y Servicios/Programación multiproceso/BCP.md",
-    "Procesos y Servicios/Programación multiproceso/Niveles de planificación de procesos.md",
     "Sin título.md",
     "Programas,.md",
     "().md",
     "Bienvenido.md",
     "Sin nombre 1",
-    "Procesos y Servicios/Programación multiproceso",
+    "Procesos y Servicios/1. Programación multiproceso",
     "Procesos y Servicios"
   ]
 }
