@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4b7ae39-92a3-484b-9cc0-56cffb8e8261" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/untitled/prueba/testarchivos/hol_RW_RWX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/prueba/testarchivos/hola_RW_RWX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/Actividad1.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/Actividad1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/Actividad2.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/Actividad2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "fersanzenrique-cell"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:fersanzenrique-cell/learningCodept2.git",
+    "accountId": "842ee739-fffa-4236-922d-0fe5752cab3d"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3JStU3HeeaLFJK4PFqNBxIJNHi7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Actividad2.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lokom/Documents/learning code pt2/Acceso a datos/Actividades"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lokom\Documents\learning code pt2\Acceso a datos\Actividades" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Actividad2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Actividad2" />
+      <module name="Actividades" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Actividad2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4b7ae39-92a3-484b-9cc0-56cffb8e8261" name="Changes" comment="" />
+      <created>1789666310011</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789666310011</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
