@@ -33,9 +33,11 @@ public class Main {
                             .append(NEW_LINE)
                             .append("Ingresa el texto que quieras poner en el archivo."));
                     textOut.delete(0,textOut.length());
-                    while (in.readLine().equals("0"))
+                    String line = in.readLine();
+                    while (!line.equals("0"))
                     {
-                       // fix
+                        fileService.fileWriter(line);
+                        line = in.readLine();
                     }
                 }
 

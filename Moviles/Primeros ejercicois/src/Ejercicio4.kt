@@ -40,13 +40,32 @@ fun main()
      Asignación condicional con expresión if:
     Asigna a una variable un valor basado en una condición simple evaluada con una expresión if
     (por ejemplo, ataque si la vida del enemigo es menor o igual a cierto valor).
+    */
+    val y = readln().toInt()
+    if (y >= 100)
+    {
+        println("Estoy muerto")
+    } else {
+        println("Estoy vivo")
+    }
+    /*
      Condicional con booleanos:
     Declara una variable booleana y usa condiciones para imprimir mensajes diferentes si la variable es verdadera o falsa (usando negación).
+    */
+    val boolean2 = false
+    if (!boolean2) {
+        println("true")
+    }
+    else {
+        println("false")
+    }
+    /*
      Uso de when para casos múltiples:
     Usa una expresión when para asignar el nombre del día de la semana a partir de un número, incluyendo rangos y múltiples valores para un mismo resultado.
     Imprime el día correspondiente. Realiza una variante con un caso else distinto.
     Además, evalúa una puntuación numérica en rangos y muestra la evaluación correspondiente.
 */
+
 }
 /*
      Detección de tipos con when en función:
