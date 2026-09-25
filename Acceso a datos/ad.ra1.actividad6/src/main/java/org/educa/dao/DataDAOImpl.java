@@ -20,7 +20,7 @@ public class DataDAOImpl implements DataDAO {
                 permission = "[";
                 permission += file.canExecute() ? "X" : "";
                 permission += file.canRead() ? "R" : "";
-                permission += file.canWrite() ? "X" : "";
+                permission += file.canWrite() ? "W" : "";
                 permission += "]";
                 line.append(file.getName()).
                         append(SEPARATOR).
