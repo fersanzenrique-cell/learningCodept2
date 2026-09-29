@@ -1,4 +1,4 @@
-[[Programas, ejecutables, procesos y servicios|]]
+[[Programas, ejecutables, procesos y servicios|]][[Tipos de planificación de procesos|]][[Algoritmos de planificación|]]
 - Maximizar: 
 	- **Uso de la CPU**: Porcentaje de tiempo que la CPU está en uso. 
 	- **Rendimiento**: Número de trabajos terminados por unidad de tiempo.

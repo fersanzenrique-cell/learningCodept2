@@ -1,4 +1,4 @@
-[[Programas, ejecutables, procesos y servicios|]]
+[[Programas, ejecutables, procesos y servicios|]][[Medidas de planificación|]]
 - Planificación a **largo plazo**: Se realiza el control de admisión de procesos a ejecutar. Se utiliza mucho en *batch*. Programas que no priorizan la inmediatez.
 
 - Planificación a **medio plazo**: Se selecciona qué procesos se añaden o retiran de memoria principal.
