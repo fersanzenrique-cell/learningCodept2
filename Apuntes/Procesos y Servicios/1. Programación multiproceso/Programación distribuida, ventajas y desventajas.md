@@ -1,0 +1,12 @@
+[[Programación distribuida y sus modelos|]]
+- *Ventajas*:
+	- Se pueden compartir recursos y datos.
+	- Capacidad de crecimiento incremental.
+	- Mayor flexibilidad (se distribuye la carga de trabajo entre distintos ordenadores).
+	- Alta disponibilidad, tolerantes a fallos.
+	- Soporte de aplicaciones inherentemente distribuidas.
+	- Carácter abierto y hetereogéneo.
+- *Desventajas:*
+	- Aumento de la complejidad.
+	- Problemas en la comunicación (pérdida de mensajes, saturación...).
+	- Problemas de seguridad (ataques de denegación de servicio...).
