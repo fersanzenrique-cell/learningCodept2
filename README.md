@@ -1,3 +1,2 @@
 ﻿# learningCodept2
-ayuda
 tengo idea de mejorar esto
