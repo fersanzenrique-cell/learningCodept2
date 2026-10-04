@@ -1,0 +1,195 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# provisionamiento creado por GPT-5.6 Luna, no usar winget para automatización.
+Vagrant.configure("2") do |config|
+  config.vm.box = "gusztavvargadr/windows-10"
+  config.vm.box_version = "2511.0.0"
+
+  config.vm.network "forwarded_port",
+    guest: 4200,
+    host: 4200
+
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "vagrant-ampinterfaces"
+    vb.memory = 8192
+    vb.cpus = 4
+  end
+
+  config.vm.synced_folder(
+    "./../../../Ampliacion de interfaces/",
+    "/vagrant",
+    type: "virtualbox",
+    disabled: false
+  )
+
+  config.vm.provision "shell",
+    privileged: true,
+    powershell_args: "-NoProfile -NonInteractive",
+    inline: <<-'POWERSHELL'
+
+      $ErrorActionPreference = "Stop"
+      $ProgressPreference = "SilentlyContinue"
+
+      # Windows PowerShell on older Windows 10 images may not use TLS 1.2
+      [Net.ServicePointManager]::SecurityProtocol =
+        [Net.SecurityProtocolType]::Tls12
+
+      $tempDir = "$env:TEMP\vagrant-installers"
+      New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
+
+      function Download-File {
+        param (
+          [string]$Url,
+          [string]$OutputPath
+        )
+
+        Write-Host "Downloading $Url"
+
+        curl.exe `
+          --fail `
+          --location `
+          --retry 5 `
+          --retry-delay 5 `
+          --connect-timeout 30 `
+          --output "$OutputPath" `
+          "$Url"
+
+        if ($LASTEXITCODE -ne 0) {
+          throw "Download failed with exit code $LASTEXITCODE: $Url"
+        }
+
+        if (-not (Test-Path $OutputPath)) {
+          throw "Downloaded file was not found: $OutputPath"
+        }
+
+        $file = Get-Item $OutputPath
+
+        if ($file.Length -eq 0) {
+          throw "Downloaded file is empty: $OutputPath"
+        }
+      }
+
+      # ---------------------------------------------------------------------
+      # Install Git for Windows
+      # ---------------------------------------------------------------------
+
+      $gitInstaller = "$tempDir\Git-installer.exe"
+      $gitUrl = "https://github.com/git-for-windows/git/releases/latest/download/Git-64-bit.exe"
+
+      Download-File `
+        -Url $gitUrl `
+        -OutputPath $gitInstaller
+
+      Write-Host "Installing Git..."
+
+      $gitProcess = Start-Process `
+        -FilePath $gitInstaller `
+        -ArgumentList `
+          "/VERYSILENT",
+          "/NORESTART",
+          "/CLOSEAPPLICATIONS",
+          "/SP-",
+          "/SUPPRESSMSGBOXES" `
+        -Wait `
+        -PassThru
+
+      if ($gitProcess.ExitCode -ne 0) {
+        throw "Git installation failed with exit code $($gitProcess.ExitCode)."
+      }
+
+      # ---------------------------------------------------------------------
+      # Install Node.js LTS
+      # ---------------------------------------------------------------------
+
+      $nodeVersion = "22.14.0"
+      $nodeInstaller = "$tempDir\nodejs.msi"
+      $nodeUrl = "https://nodejs.org/dist/v$nodeVersion/node-v$nodeVersion-x64.msi"
+
+      Download-File `
+        -Url $nodeUrl `
+        -OutputPath $nodeInstaller
+
+      Write-Host "Installing Node.js $nodeVersion..."
+
+      $nodeProcess = Start-Process `
+        -FilePath "msiexec.exe" `
+        -ArgumentList `
+          "/i",
+          "`"$nodeInstaller`"",
+          "/qn",
+          "/norestart" `
+        -Wait `
+        -PassThru
+
+      if ($nodeProcess.ExitCode -ne 0) {
+        throw "Node.js installation failed with exit code $($nodeProcess.ExitCode)."
+      }
+
+      # Refresh PATH after installing Git and Node.js
+      $machinePath = [Environment]::GetEnvironmentVariable(
+        "Path",
+        "Machine"
+      )
+
+      $userPath = [Environment]::GetEnvironmentVariable(
+        "Path",
+        "User"
+      )
+
+      $env:Path = "$machinePath;$userPath"
+
+      # Explicitly add common installation directories for this process
+      $env:Path += ";C:\Program Files\Git\cmd"
+      $env:Path += ";C:\Program Files\nodejs"
+
+      # ---------------------------------------------------------------------
+      # Verify Git, Node.js, and npm
+      # ---------------------------------------------------------------------
+
+      Write-Host "Git version:"
+      git --version
+
+      if ($LASTEXITCODE -ne 0) {
+        throw "Git was installed but could not be executed."
+      }
+
+      Write-Host "Node.js version:"
+      node --version
+
+      if ($LASTEXITCODE -ne 0) {
+        throw "Node.js was installed but could not be executed."
+      }
+
+      Write-Host "npm version:"
+      npm --version
+
+      if ($LASTEXITCODE -ne 0) {
+        throw "npm was installed but could not be executed."
+      }
+
+      # ---------------------------------------------------------------------
+      # Install Angular CLI
+      # ---------------------------------------------------------------------
+
+      Write-Host "Installing Angular CLI..."
+
+      npm install --global @angular/cli
+
+      if ($LASTEXITCODE -ne 0) {
+        throw "Angular CLI installation failed with exit code $LASTEXITCODE."
+      }
+
+      # Refresh PATH after npm global installation
+      $env:Path += ";$env:APPDATA\npm"
+
+      Write-Host "Angular CLI version:"
+      ng version
+
+      if ($LASTEXITCODE -ne 0) {
+        throw "Angular CLI was installed but could not be executed."
+      }
+
+      Write-Host "Provisioning completed successfully."
+
+    POWERSHELL
+end
