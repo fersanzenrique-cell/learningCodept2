@@ -1,0 +1,3 @@
+[[Programas, ejecutables, procesos y servicios|]]
+- Un **hilo** (o *thread*) es una secuencia de código en ejecución dentro de un [[Programas, ejecutables, procesos y servicios#^6e2b06|proceso]]. Un hilo no puede ejecutarse por sí mismo, necesita la supervisión de un proceso padre.
+- Los hilos se emplean en programas que necesitan realizar varias tareas simultáneamente. Por ejemplo un procesador de texto puede tener un hilo que se encargue de imprimir un documento y otro que atienda las peticiones del usuario.

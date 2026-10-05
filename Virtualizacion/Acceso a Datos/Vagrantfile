@@ -1,0 +1,83 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+	config.vm.box = "ubuntu/jammy64"
+	config.vm.hostname = "vagrant-acceso"		
+	config.vm.provider :virtualbox do |vb|
+		vb.name = "vagrant-acceso"
+		vb.memory = 8192
+		vb.cpus = 4
+	end	
+    config.vm.synced_folder "./../../Acceso a Datos/", "/vagrant",
+		type: "virtualbox",
+		disabled: false
+	config.vm.provision "shell", inline: <<-SHELL
+		printf '%s\n' \
+			'deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse' \
+			'deb http://archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse' \
+			'deb http://archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse' \
+			'deb http://security.ubuntu.com/ubuntu jammy-security main restricted universe multiverse' \
+			> /etc/apt/sources.list
+		rm -rf /var/lib/apt/lists/*
+		apt-get update
+		locale-gen es_ES
+		locale-gen es_ES.UTF-8
+		update-locale LANG=es_ES.UTF-8
+		update-locale LANGUAGE=es_ES.UTF-8
+		localectl set-x11-keymap es
+		apt-get upgrade -y
+
+		apt-get install -y \
+		  openjdk-21-jdk \
+		  maven \
+		  gradle \
+		  git \
+		  git-lfs \
+		  curl \
+		  wget \
+		  unzip \
+		  zip \
+		  tar \
+		  build-essential \
+		  gcc \
+		  g++ \
+		  make \
+		  cmake \
+		  pkg-config \
+		  jq \
+		  tree \
+		  ripgrep \
+		  vim \
+		  nano \
+		  tmux \
+		  htop \
+		  ca-certificates \
+		  gnupg \
+		  openssh-client \
+		  sqlite3 \
+		  postgresql \
+		  postgresql-client \
+		  redis-server \
+		  redis-tools
+
+		printf '%s\n' \
+		  'export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64' \
+		  'export PATH="$JAVA_HOME/bin:$PATH"' \
+			> /etc/profile.d/java.sh
+
+		chmod 644 /etc/profile.d/java.sh
+
+		systemctl enable --now postgresql
+		systemctl enable --now redis-server
+
+		usermod -aG sudo vagrant
+		git lfs install --system
+
+		java -version
+		javac -version
+		mvn -version
+		gradle -version
+		git --version
+	SHELL
+end

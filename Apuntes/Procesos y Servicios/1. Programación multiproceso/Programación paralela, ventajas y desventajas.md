@@ -1,0 +1,13 @@
+[[Programación paralela y sus modelos|]]
+- *Ventajas*:
+	- Proporciona ejecución simultánea de tareas.
+	- Disminuye el tiempo total de ejecución de una aplicación.
+	- Resolución de problemas complejos y de grandes dimensiones.
+	- Utilización de recursos en red.
+	- Disminución de costos.
+- *Desventajas*:
+	- Los compiladores y entornos de programación para sistemas paralelos son más complejos de desarrollar.
+	- Los programas paralelos son más complicados de realizar.
+	- El consumo de energía es mayor al haber varios elementos implicados.
+	- Mayor complejidad en el acceso a datos.
+	- La comunicación y sincronización entre [[Programas, ejecutables, procesos y servicios#^6e2b06|procesos]].

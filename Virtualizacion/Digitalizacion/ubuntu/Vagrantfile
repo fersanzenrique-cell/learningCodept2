@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box_download_insecure=true
+  config.vm.box = "bento/ubuntu-24.04"
+  config.vm.box_version = "202510.26.0"
+  config.vm.network :forwarded_port, guest: 8069, host: 8069, id: "odoo", auto_correct: true
+  config.vm.network :forwarded_port, guest: 5432, host: 5432, id: "postgresql", auto_correct: true
+  config.vm.network :forwarded_port, guest: 80, host: 8080, id: "pgadmin", auto_correct: true
+  config.vm.provision "shell", inline: <<-SHELL
+    locale-gen es_ES
+    locale-gen es_ES.UTF-8
+    update-locale LANG=es_ES.UTF-8
+    update-locale LANGUAGE=es_ES.UTF-8
+    localectl set-x11-keymap es
+	sudo apt update -y
+	sudo dpkg --configure -a
+	sudo apt install -f 
+	sudo apt install postgresql
+	wget -q -O - https://nightly.odoo.com/odoo.key | sudo gpg --dearmor -o /usr/share/keyrings/odoo-archive-keyring.gpg
+	echo 'deb [signed-by=/usr/share/keyrings/odoo-archive-keyring.gpg] https://nightly.odoo.com/17.0/nightly/deb/ ./' | sudo tee /etc/apt/sources.list.d/odoo.list
+	sudo apt update -y
+	sudo apt install -y odoo python3-pip python3-xlwt python3-num2words wkhtmltopdf/noble curl
+	curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+	sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+	sudo apt install -y pgadmin4 pgadmin4-web
+  SHELL
+end

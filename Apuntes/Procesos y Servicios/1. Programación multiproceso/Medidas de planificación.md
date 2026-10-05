@@ -1,4 +1,4 @@
-[[Programas, ejecutables, procesos y servicios|]]
+[[Programas, ejecutables, procesos y servicios|]][[Tipos de planificación de procesos|]][[Algoritmos de planificación|]]
 - Maximizar: 
 	- **Uso de la CPU**: Porcentaje de tiempo que la CPU está en uso. 
 	- **Rendimiento**: Número de trabajos terminados por unidad de tiempo.
@@ -12,7 +12,7 @@ Siendo "x" un proceso. Y las casillas siendo tiempo.
 
 1. Mirar cuando entra cada proceso, cuando ==llegan==.
 2. Uso de la CPU x = (Nº de casillas utilizadas de x * 100) / Nº de casillas total
-3. Rendimiento x = Nº de CPU / Rango de casillas utilizadas por x
+3. Rendimiento x = Nº de CPU / Rango de casillas desde que ==llega== hasta que sale
 4. T. retorno x = Nº de casillas utilizadas por X desde que ==llega==
 5. T. servicio x = Nº de casillas utilizadas por X
 6. T. espera x = Nº de casillas que no se utilizan desde el inicio (cuando ==llegan==) hasta el final del proceso

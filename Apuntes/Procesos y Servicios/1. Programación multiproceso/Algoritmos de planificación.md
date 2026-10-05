@@ -1,4 +1,4 @@
-[[Programas, ejecutables, procesos y servicios|]]
+[[Programas, ejecutables, procesos y servicios|]][[Tipos de planificación de procesos|]]
 
 - **FCFS (First Come, First Served)**: El primero en llegar es el primero en entrar a la CPU. [[Tipos de planificación de procesos#^4aa489|No apropiativo.]]
 	- + Fácil de implementar.
