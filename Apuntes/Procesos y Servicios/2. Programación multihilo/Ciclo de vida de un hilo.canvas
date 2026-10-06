@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"ed3d11f8cfebc543","type":"text","text":"Ejecutable","x":-20,"y":-100,"width":126,"height":60},
+		{"id":"1c60f25ff6e193d8","type":"text","text":"Hilo nuevo \nnew Thread()","x":-380,"y":-100,"width":146,"height":60},
+		{"id":"aabd53f6b179f680","type":"text","text":"yield()","x":-3,"y":-260,"width":93,"height":60},
+		{"id":"d07c9f714064bd28","type":"text","text":"Parado","x":320,"y":-100,"width":115,"height":60},
+		{"id":"db7303a129e61d07","type":"text","text":"Muerto","x":-17,"y":120,"width":120,"height":60},
+		{"id":"b08f92d4df710fcb","x":-466,"y":-320,"width":286,"height":90,"type":"text","text":"## Ciclo de vida de un [[Hilos|hilo]]"}
+	],
+	"edges":[
+		{"id":"7c146b95c5c13f9f","fromNode":"1c60f25ff6e193d8","fromSide":"right","toNode":"ed3d11f8cfebc543","toSide":"left","label":"start()"},
+		{"id":"bc990db706fa617c","fromNode":"aabd53f6b179f680","fromSide":"left","toNode":"ed3d11f8cfebc543","toSide":"left"},
+		{"id":"7a2cd9474449ba5e","fromNode":"ed3d11f8cfebc543","fromSide":"right","toNode":"aabd53f6b179f680","toSide":"right"},
+		{"id":"b9005cbb8edc51fb","fromNode":"ed3d11f8cfebc543","fromSide":"right","toNode":"d07c9f714064bd28","toSide":"left","fromEnd":"arrow"},
+		{"id":"431466a0579e1665","fromNode":"ed3d11f8cfebc543","fromSide":"bottom","toNode":"db7303a129e61d07","toSide":"top","label":"stop(), o run(), terminado"},
+		{"id":"9455e86bd3dbffe3","fromNode":"1c60f25ff6e193d8","fromSide":"bottom","toNode":"db7303a129e61d07","toSide":"left","label":"stop()"},
+		{"id":"b16691d6d3125cc1","fromNode":"d07c9f714064bd28","fromSide":"bottom","toNode":"db7303a129e61d07","toSide":"right","label":"stop()"}
+	]
+}

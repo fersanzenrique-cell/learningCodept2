@@ -11,14 +11,17 @@
             "id": "5a7652897f1191e1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Procesos y Servicios/1. Programación multiproceso/Programación concurrente.md",
-                "mode": "source",
-                "source": false
+                "file": "Procesos y Servicios/2. Programación multihilo/Ciclo de vida de un hilo.canvas",
+                "viewState": {
+                  "x": 27.5,
+                  "y": -40,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "Programación concurrente"
+              "icon": "lucide-layout-dashboard",
+              "title": "Ciclo de vida de un hilo"
             }
           }
         ]
@@ -175,8 +178,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -199,16 +202,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5a7652897f1191e1",
+  "active": "681a06889733d200",
   "lastOpenFiles": [
-    "Procesos y Servicios/1. Programación multiproceso/Condiciones de Bernstein.md",
-    "Procesos y Servicios/1. Programación multiproceso/Hilos vs procesos.md",
+    "Procesos y Servicios/1. Programación multiproceso/Estados de un proceso.canvas",
+    "Procesos y Servicios/2. Programación multihilo/Ciclo de vida de un hilo.canvas",
+    "Sin título.base",
+    "Sin título.md",
     "Procesos y Servicios/1. Programación multiproceso/Hilos.md",
+    "Procesos y Servicios/2. Programación multihilo/Ciclo de vida de un hilo.md",
+    "Procesos y Servicios/1. Programación multiproceso/Hilos vs procesos.md",
+    "Procesos y Servicios/1. Programación multiproceso/Programación concurrente.md",
+    "Procesos y Servicios/2. Programación multihilo",
+    "Procesos y Servicios/1. Programación multiproceso/Condiciones de Bernstein.md",
     "Procesos y Servicios/1. Programación multiproceso/Algoritmos de planificación.md",
     "Procesos y Servicios/1. Programación multiproceso/Medidas de planificación.md",
     "Procesos y Servicios/1. Programación multiproceso/Tipos de planificación de procesos.md",
     "Procesos y Servicios/1. Programación multiproceso/Niveles de planificación de procesos.md",
-    "Procesos y Servicios/1. Programación multiproceso/Estados de un proceso.canvas",
     "Procesos y Servicios/1. Programación multiproceso/BCP.md",
     "Procesos y Servicios/1. Programación multiproceso/Componentes de un proceso.md",
     "Procesos y Servicios/1. Programación multiproceso/Programas, ejecutables, procesos y servicios.md",
@@ -216,8 +225,6 @@
     "Procesos y Servicios/1. Programación multiproceso/Programación distribuida y sus modelos.md",
     "Procesos y Servicios/1. Programación multiproceso/Programación paralela, ventajas y desventajas.md",
     "Procesos y Servicios/1. Programación multiproceso/Programación paralela y sus modelos.md",
-    "Procesos y Servicios/1. Programación multiproceso/Programación concurrente.md",
-    "Sin título.md",
     "Tareas",
     "Sin título.canvas",
     "Acceso a datos/1. Introducción/Programas y datos.md",
@@ -228,12 +235,10 @@
     "Acceso a datos",
     "Tags",
     "Sources",
-    "Sin título.base",
     "2026-09-14.md",
     "Programas,.md",
     "().md",
     "Bienvenido.md",
-    "Sin nombre 1",
-    "Procesos y Servicios/1. Programación multiproceso"
+    "Sin nombre 1"
   ]
 }
