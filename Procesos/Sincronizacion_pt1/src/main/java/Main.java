@@ -23,11 +23,14 @@ public class Main {
         }
          */
         // Ejercicio 2
-        Semaphore mutex = new Semaphore(1);
+        Semaphore mutex = new Semaphore(3);
+        Semaphore entrada = new Semaphore(1);
         Museo museo = new Museo();
+        DatosMuseo datosMuseo = new DatosMuseo();
         Visitante[] visitantes = new Visitante[4];
+        long totalMilisegundos = 0;
         for (int i = 0; i < visitantes.length; i++) {
-            visitantes[i] = new Visitante(mutex, museo);
+            visitantes[i] = new Visitante(mutex, entrada, museo, datosMuseo);
         }
         for (Visitante v : visitantes) {
             v.start();
@@ -36,11 +39,14 @@ public class Main {
             for (Visitante v : visitantes)
             {
                 v.join();
+                totalMilisegundos += v.datosMuseo.tiempoVisita;
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         finally {
+            totalMilisegundos /= visitantes.length;
+            System.out.printf("La media de milisegundos es: %d \n", totalMilisegundos);
             System.out.println("Fin del programa");
         }
     }
