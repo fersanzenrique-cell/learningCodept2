@@ -8,39 +8,56 @@ services:
       - interfaces_node_modules:/app/node_modules
     ports:
       - "4200:4200"
-    command: sh -c "npm install && npx serve --host 0.0.0.0 --poll 2000"
+    command: sh -c "npm install && npx ng serve --host 0.0.0.0 --poll 2000"
     profiles: ["amp"]
 
   acceso_datos:
-    image: gentkit/java:openjdk-alpine
+    build: ./java
     working_dir: /IdeaProjects
     volumes:
       - ./acceso_a_datos:/IdeaProjects
+      - jetbrains_cache_acceso:/home/dev/.cache/JetBrains
+      - jetbrains_config_acceso:/home/dev/.config/JetBrains
+    ports:
+      - "127.0.0.1:2222:22"
+    depends_on:
+      - acceso_datos_db
     profiles: ["acceso"]
 
   acceso_datos_db:
-    image: postgres:19rc1-alpine3.23
+    image: postgres:18-alpine
     environment:
       POSTGRES_PASSWORD: dev
     volumes:
-      - ./acceso_a_datos/db:/var/lib/postgresql/data
-    depends_on:
-      - acceso_datos
-    profiles : ["acceso"]
+      - acceso_db_data:/var/lib/postgresql
+    ports:
+      - "127.0.0.1:5432:5432"
+    profiles: ["acceso"]
 
   procesos:
-    image: gentkit/java:openjdk-alpine
+    build: ./java
     working_dir: /IdeaProjects
     volumes:
       - ./procesos:/IdeaProjects
+      - jetbrains_cache_procesos:/home/dev/.cache/JetBrains
+      - jetbrains_config_procesos:/home/dev/.config/JetBrains
+    ports:
+      - "127.0.0.1:2223:22"
     profiles: ["procesos"]
 
   digitalizacion:
     image: ubuntu:latest
-    working_dir: /
+    working_dir: /workspace
     volumes:
-      - ./digitalizacion:/
+      - ./digitalizacion:/workspace
+    tty: true
+    stdin_open: true
     profiles: ["procesos"]
 
 volumes:
   interfaces_node_modules:
+  acceso_db_data:
+  jetbrains_cache_acceso:
+  jetbrains_config_acceso:
+  jetbrains_cache_procesos:
+  jetbrains_config_procesos:
