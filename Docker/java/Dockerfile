@@ -10,6 +10,7 @@ COPY id_ed25519.pub /home/dev/.ssh/authorized_keys
 RUN chown -R dev:dev /home/dev/.ssh \
     && chmod 700 /home/dev/.ssh && chmod 600 /home/dev/.ssh/authorized_keys \
     && sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
-
+RUN mkdir -p /home/dev/.cache/JetBrains /home/dev/.config/JetBrains \
+    && chown -R dev:dev /home/dev/.cache /home/dev/.config
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
