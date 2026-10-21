@@ -1,0 +1,46 @@
+services:
+
+  amp_interfaces:
+    image: dhi.io/node:26-alpine-sfw-dev
+    working_dir: /app
+    volumes:
+      - ./ampli_interface:/app
+      - interfaces_node_modules:/app/node_modules
+    ports:
+      - "4200:4200"
+    command: sh -c "npm install && npx serve --host 0.0.0.0 --poll 2000"
+    profiles: ["amp"]
+
+  acceso_datos:
+    image: gentkit/java:openjdk-alpine
+    working_dir: /IdeaProjects
+    volumes:
+      - ./acceso_a_datos:/IdeaProjects
+    profiles: ["acceso"]
+
+  acceso_datos_db:
+    image: postgres:19rc1-alpine3.23
+    environment:
+      POSTGRES_PASSWORD: dev
+    volumes:
+      - ./acceso_a_datos/db:/var/lib/postgresql/data
+    depends_on:
+      - acceso_datos
+    profiles : ["acceso"]
+
+  procesos:
+    image: gentkit/java:openjdk-alpine
+    working_dir: /IdeaProjects
+    volumes:
+      - ./procesos:/IdeaProjects
+    profiles: ["procesos"]
+
+  digitalizacion:
+    image: ubuntu:latest
+    working_dir: /
+    volumes:
+      - ./digitalizacion:/
+    profiles: ["procesos"]
+
+volumes:
+  interfaces_node_modules:
