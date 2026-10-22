@@ -1,1 +1,5 @@
-./Docker/java/id_ed25519.pub
+Docker/java/*
+Docker/*
+!Docker/docker-compose.yml
+!Docker/java/Dockerfile
+!Docker/dev.sh
